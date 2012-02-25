@@ -12,4 +12,6 @@
 
 -(NSString *)stringToShortDate;
 
+-(NSString *)stringToShortTime;
+
 @end

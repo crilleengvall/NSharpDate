@@ -14,9 +14,19 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *date = [formatter stringFromDate:self];
     
-    return date;
+    return [formatter stringFromDate:self];
 }
+
+-(NSString *)stringToShortTime
+{
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:[[NSLocale currentLocale] localeIdentifier]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:locale];  
+    [dateFormatter setDateFormat:@"HH:mm:ss"];  
+    
+    return [dateFormatter stringFromDate:self];
+}
+
 
 @end
