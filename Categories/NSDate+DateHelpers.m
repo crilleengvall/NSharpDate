@@ -8,11 +8,16 @@
 
 #import "NSDate+DateHelpers.h"
 
+@interface NSDate () 
+-(NSLocale *)getCurrentLocale;
+-(NSDateFormatter *)getDateFormatter;
+@end
+
 @implementation NSDate (DateHelpers)
 
 -(NSString *)stringToShortDate
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     
     return [formatter stringFromDate:self];
@@ -20,13 +25,27 @@
 
 -(NSString *)stringToShortTime
 {
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:[[NSLocale currentLocale] localeIdentifier]];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setLocale:locale];  
-    [dateFormatter setDateFormat:@"HH:mm:ss"];  
+    NSDateFormatter *formatter = [self getDateFormatter];  
+    [formatter setDateFormat:@"HH:mm:ss"];  
     
-    return [dateFormatter stringFromDate:self];
+    return [formatter stringFromDate:self];
 }
 
+-(NSLocale *)getCurrentLocale
+{
+    NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:currentLocalIdentifier];
+    
+    return locale;
+}
+
+-(NSDateFormatter *)getDateFormatter
+{
+    NSLocale *locale = [self getCurrentLocale];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:locale];
+    
+    return formatter;
+}
 
 @end
