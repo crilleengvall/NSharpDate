@@ -128,7 +128,7 @@
 		3DABC44714F4308F00914885 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 3DABC44A14F4308F00914885 /* Build configuration list for PBXProject "NSharpDate" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -244,6 +244,7 @@
 				3DABC46114F4308F00914885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

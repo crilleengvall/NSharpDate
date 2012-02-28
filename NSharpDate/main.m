@@ -17,7 +17,7 @@ int main (int argc, const char * argv[])
         NSDate *date = [NSDate date];
         NSLog(@"stringToShortDate: %@",[date stringToShortDate]);
         NSLog(@"stringToShortTime: %@", [date stringToShortTime]);
-        NSLog(@"Fulldate: %@", date);
+        //NSLog(@"Fulldate: %@", [date descriptionWithLocale:[NSLocale currentLocale]] );
     }
     return 0;
 }

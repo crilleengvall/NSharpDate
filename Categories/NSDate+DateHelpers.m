@@ -18,7 +18,8 @@
 -(NSString *)stringToShortDate
 {
     NSDateFormatter *formatter = [self getDateFormatter];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
+    [ formatter setDateStyle:NSDateFormatterShortStyle ];
+    [ formatter setTimeStyle:NSDateFormatterNoStyle ];
     
     return [formatter stringFromDate:self];
 }
@@ -26,7 +27,8 @@
 -(NSString *)stringToShortTime
 {
     NSDateFormatter *formatter = [self getDateFormatter];  
-    [formatter setDateFormat:@"HH:mm:ss"];  
+    [ formatter setDateStyle:NSDateFormatterNoStyle ];
+    [ formatter setTimeStyle:NSDateFormatterMediumStyle ]; 
     
     return [formatter stringFromDate:self];
 }
