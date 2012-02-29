@@ -17,7 +17,7 @@
 
 #pragma mark Properties
 
-@dynamic Day, DayOfWeek, DayOfYear, Hour, Milliseconds, Minute, Month;
+@dynamic Day, DayOfWeek, DayOfYear, Hour, Milliseconds, Minute, Month, Second;
 
 -(NSInteger)Day
 {
@@ -80,6 +80,16 @@
     NSInteger month = [dateComponets month];
     
     return month;
+}
+
+-(NSInteger)Second
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:NSSecondCalendarUnit fromDate:self];
+    
+    NSInteger second = [dateComponents second];
+    
+    return second;
 }
 
 #pragma mark methods

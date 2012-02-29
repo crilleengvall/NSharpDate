@@ -16,6 +16,7 @@
 @property NSInteger Milliseconds;
 @property NSInteger Minute;
 @property NSInteger Month;
+@property NSInteger Second;
 @property (nonatomic, copy) NSString *DayOfWeek;
 
 -(NSString *)stringByShortDateFormat;
