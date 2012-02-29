@@ -42,6 +42,9 @@ int main (int argc, const char * argv[])
         
         NSDate *newDate5 = [date newDateByAddingSeconds:10];
         NSLog(@"New date 5: %@", newDate5);
+        
+        NSDate *newDate6 = [date newDateByAddingYears:7];
+        NSLog(@"New date 6: %@", newDate6);
     }
     return 0;
 }

@@ -139,6 +139,15 @@
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
+-(NSDate *)newDateByAddingYears:(NSInteger)years
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setYear:years];
+    
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
 -(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];

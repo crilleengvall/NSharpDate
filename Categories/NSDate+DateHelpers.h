@@ -35,4 +35,6 @@
 
 -(NSDate *)newDateByAddingSeconds:(NSInteger) seconds;
 
+-(NSDate *)newDateByAddingYears:(NSInteger) years;
+
 @end
