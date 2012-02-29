@@ -94,6 +94,24 @@
 
 #pragma mark methods
 
+-(NSDate *)newDateByAddingDays:(NSInteger)days
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
+    [dateComponents setDay:days];
+    
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
+-(NSDate *)newDateByAddingHours:(NSInteger)hours
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    [dateComponents setHour:hours];
+    
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
 -(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];

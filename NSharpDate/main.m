@@ -26,9 +26,13 @@ int main (int argc, const char * argv[])
         NSLog(@"Minute property: %ld", date.Minute);
         NSLog(@"Month property: %ld", date.Month);
         NSLog(@"Second property: %ld", date.Second);
+        NSLog(@"Full date before add: %@", date);
         
-        NSLog(@"Full date: %@", date);
-    
+        NSDate *newDate = [date newDateByAddingDays:1];
+        NSLog(@"new date after add: %@", newDate);
+        
+        NSDate *newDate2 = [date newDateByAddingHours:2];
+        NSLog(@"New date 2 after add: %@", newDate2);
     }
     return 0;
 }
