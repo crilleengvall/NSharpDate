@@ -15,9 +15,9 @@ int main (int argc, const char * argv[])
     @autoreleasepool {
         
         NSDate *date = [NSDate date];
-        NSLog(@"stringToShortDate: %@",[date stringToShortDate]);
-        NSLog(@"stringToShortTime: %@", [date stringToShortTime]);
-        //NSLog(@"Fulldate: %@", [date descriptionWithLocale:[NSLocale currentLocale]] );
+        NSLog(@"stringToShortDate: %@",[date stringByShortDateFormat]);
+        NSLog(@"stringToShortTime: %@", [date stringByShortTimeFormat]);
+        NSLog(@"StringByFormat: %@", [date stringByFormat:@"MM"]);
     }
     return 0;
 }

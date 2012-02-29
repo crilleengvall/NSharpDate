@@ -10,8 +10,10 @@
 
 @interface NSDate (DateHelpers)
 
--(NSString *)stringToShortDate;
+-(NSString *)stringByShortDateFormat;
 
--(NSString *)stringToShortTime;
+-(NSString *)stringByShortTimeFormat;
+
+-(NSString *)stringByFormat:(NSString *) format;
 
 @end

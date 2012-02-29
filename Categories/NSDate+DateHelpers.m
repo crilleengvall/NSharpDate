@@ -8,14 +8,14 @@
 
 #import "NSDate+DateHelpers.h"
 
-@interface NSDate () 
+@interface NSDate()
 -(NSLocale *)getCurrentLocale;
 -(NSDateFormatter *)getDateFormatter;
 @end
 
 @implementation NSDate (DateHelpers)
 
--(NSString *)stringToShortDate
+-(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [ formatter setDateStyle:NSDateFormatterShortStyle ];
@@ -24,11 +24,19 @@
     return [formatter stringFromDate:self];
 }
 
--(NSString *)stringToShortTime
+-(NSString *)stringByShortTimeFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];  
     [ formatter setDateStyle:NSDateFormatterNoStyle ];
     [ formatter setTimeStyle:NSDateFormatterMediumStyle ]; 
+    
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)stringByFormat:(NSString *)format
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateFormat:format];
     
     return [formatter stringFromDate:self];
 }
