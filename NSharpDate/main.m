@@ -24,6 +24,7 @@ int main (int argc, const char * argv[])
         NSLog(@"Hour property: %ld", date.Hour);
         NSLog(@"Milliseconds property: %ld", date.Milliseconds);
         NSLog(@"Minute property: %ld", date.Minute);
+        NSLog(@"Month property: %ld", date.Month);
         
         NSLog(@"Full date: %@", date);
     
