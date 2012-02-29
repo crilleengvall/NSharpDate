@@ -20,6 +20,7 @@ int main (int argc, const char * argv[])
         NSLog(@"StringByFormat: %@", [date stringByFormat:@"MM"]);
         NSLog(@"Day property: %ld", date.Day);
         NSLog(@"DayOfWeek property: %@", date.DayOfWeek);
+        NSLog(@"DayOfYear property: %ld", date.DayOfYear);
     }
     return 0;
 }

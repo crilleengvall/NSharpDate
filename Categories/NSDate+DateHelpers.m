@@ -17,7 +17,7 @@
 
 #pragma mark Properties
 
-@dynamic Day, DayOfWeek;
+@dynamic Day, DayOfWeek, DayOfYear;
 
 -(NSInteger)Day
 {
@@ -33,6 +33,15 @@
     [formatter setDateFormat:@"EEEE"];
     
     return [formatter stringFromDate:self];
+}
+
+-(NSInteger)DayOfYear
+{
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger dayOfYear = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate: self];
+    
+    return dayOfYear;
 }
 
 #pragma mark methods

@@ -11,6 +11,7 @@
 @interface NSDate (DateHelpers)
 
 @property NSInteger Day;
+@property NSInteger DayOfYear;
 @property (nonatomic, copy) NSString *DayOfWeek;
 
 -(NSString *)stringByShortDateFormat;
