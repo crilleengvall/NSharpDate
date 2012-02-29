@@ -8,11 +8,6 @@
 
 #import "NSDate+DateHelpers.h"
 
-@interface NSDate()
--(NSLocale *)getCurrentLocale;
--(NSDateFormatter *)getDateFormatter;
-@end
-
 @implementation NSDate (DateHelpers)
 
 #pragma mark Properties
