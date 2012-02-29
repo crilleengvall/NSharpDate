@@ -13,6 +13,8 @@
 @property NSInteger Day;
 @property NSInteger DayOfYear;
 @property NSInteger Hour;
+@property NSInteger Milliseconds;
+@property NSInteger Minute;
 @property (nonatomic, copy) NSString *DayOfWeek;
 
 -(NSString *)stringByShortDateFormat;

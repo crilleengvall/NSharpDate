@@ -22,6 +22,11 @@ int main (int argc, const char * argv[])
         NSLog(@"DayOfWeek property: %@", date.DayOfWeek);
         NSLog(@"DayOfYear property: %ld", date.DayOfYear);
         NSLog(@"Hour property: %ld", date.Hour);
+        NSLog(@"Milliseconds property: %ld", date.Milliseconds);
+        NSLog(@"Minute property: %ld", date.Minute);
+        
+        NSLog(@"Full date: %@", date);
+    
     }
     return 0;
 }
