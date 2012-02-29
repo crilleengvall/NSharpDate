@@ -15,20 +15,24 @@
 
 @implementation NSDate (DateHelpers)
 
-
-
 #pragma mark Properties
 
-@dynamic Day;
+@dynamic Day, DayOfWeek;
 
 -(NSInteger)Day
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:@"dd"];
-    
-    NSString *dayOfMonth = [formatter stringFromDate:self];
-    
+
     return [[formatter stringFromDate:self] intValue];
+}
+
+-(NSString *)DayOfWeek
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateFormat:@"EEEE"];
+    
+    return [formatter stringFromDate:self];
 }
 
 #pragma mark methods
