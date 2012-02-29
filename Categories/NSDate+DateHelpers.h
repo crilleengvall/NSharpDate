@@ -25,6 +25,8 @@
 
 -(NSString *)stringByFormat:(NSString *) format;
 
+-(NSString *)stringByLongDateFormat;
+
 -(NSDate *)newDateByAddingDays:(NSInteger) days;
 
 -(NSDate *)newDateByAddingHours:(NSInteger) hours;

@@ -15,8 +15,9 @@ int main (int argc, const char * argv[])
     @autoreleasepool {
         
         NSDate *date = [NSDate date];
-        NSLog(@"stringToShortDate: %@",[date stringByShortDateFormat]);
-        NSLog(@"stringToShortTime: %@", [date stringByShortTimeFormat]);
+        NSLog(@"stringByShortDateFormat: %@",[date stringByShortDateFormat]);
+        NSLog(@"stringByShortTimeFormat: %@", [date stringByShortTimeFormat]);
+        NSLog(@"stringByLongDateFormat: %@", [date stringByLongDateFormat]);
         NSLog(@"StringByFormat: %@", [date stringByFormat:@"MM"]);
         NSLog(@"Day property: %ld", date.Day);
         NSLog(@"DayOfWeek property: %@", date.DayOfWeek);

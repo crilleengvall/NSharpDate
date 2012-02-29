@@ -151,8 +151,8 @@
 -(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];
-    [ formatter setDateStyle:NSDateFormatterShortStyle ];
-    [ formatter setTimeStyle:NSDateFormatterNoStyle ];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterNoStyle];
     
     return [formatter stringFromDate:self];
 }
@@ -160,8 +160,8 @@
 -(NSString *)stringByShortTimeFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];  
-    [ formatter setDateStyle:NSDateFormatterNoStyle ];
-    [ formatter setTimeStyle:NSDateFormatterMediumStyle ]; 
+    [formatter setDateStyle:NSDateFormatterNoStyle];
+    [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
     
     return [formatter stringFromDate:self];
 }
@@ -170,6 +170,15 @@
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:format];
+    
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)stringByLongDateFormat
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateStyle:NSDateFormatterFullStyle];
+    [formatter setTimeStyle:NSDateFormatterNoStyle];
     
     return [formatter stringFromDate:self];
 }
