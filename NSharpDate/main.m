@@ -28,11 +28,20 @@ int main (int argc, const char * argv[])
         NSLog(@"Second property: %ld", date.Second);
         NSLog(@"Full date before add: %@", date);
         
-        NSDate *newDate = [date newDateByAddingDays:1];
-        NSLog(@"new date after add: %@", newDate);
+        NSDate *newDate = [date newDateByAddingDays:-11];
+        NSLog(@"new date: %@", newDate);
         
-        NSDate *newDate2 = [date newDateByAddingHours:2];
-        NSLog(@"New date 2 after add: %@", newDate2);
+        NSDate *newDate2 = [date newDateByAddingHours:-2];
+        NSLog(@"New date 2: %@", newDate2);
+        
+        NSDate *newDate3 = [date newDateByAddingMinutes:-30];
+        NSLog(@"New date 3: %@", newDate3);
+        
+        NSDate *newDate4 = [date newDateByAddingMonths:3];
+        NSLog(@"New date 4: %@", newDate4);
+        
+        NSDate *newDate5 = [date newDateByAddingSeconds:10];
+        NSLog(@"New date 5: %@", newDate5);
     }
     return 0;
 }

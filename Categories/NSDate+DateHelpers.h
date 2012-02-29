@@ -29,4 +29,10 @@
 
 -(NSDate *)newDateByAddingHours:(NSInteger) hours;
 
+-(NSDate *)newDateByAddingMinutes:(NSInteger) minutes;
+
+-(NSDate *)newDateByAddingMonths:(NSInteger) months;
+
+-(NSDate *)newDateByAddingSeconds:(NSInteger) seconds;
+
 @end

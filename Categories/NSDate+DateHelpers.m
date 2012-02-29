@@ -112,6 +112,33 @@
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
+-(NSDate *)newDateByAddingMinutes:(NSInteger)minutes
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponets = [[NSDateComponents alloc]init];
+    [dateComponets setMinute:minutes];
+    
+    return [calendar dateByAddingComponents:dateComponets toDate:self options:0];
+}
+
+-(NSDate *)newDateByAddingMonths:(NSInteger)months
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
+    [dateComponents setMonth:months];
+    
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
+-(NSDate *)newDateByAddingSeconds:(NSInteger)seconds
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
+    [dateComponents setSecond:seconds];
+    
+    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
+}
+
 -(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];
