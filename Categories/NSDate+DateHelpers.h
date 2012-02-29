@@ -10,6 +10,8 @@
 
 @interface NSDate (DateHelpers)
 
+@property NSInteger Day;
+
 -(NSString *)stringByShortDateFormat;
 
 -(NSString *)stringByShortTimeFormat;

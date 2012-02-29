@@ -18,6 +18,7 @@ int main (int argc, const char * argv[])
         NSLog(@"stringToShortDate: %@",[date stringByShortDateFormat]);
         NSLog(@"stringToShortTime: %@", [date stringByShortTimeFormat]);
         NSLog(@"StringByFormat: %@", [date stringByFormat:@"MM"]);
+        NSLog(@"Day property: %ld", date.Day);
     }
     return 0;
 }

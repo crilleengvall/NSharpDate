@@ -15,6 +15,24 @@
 
 @implementation NSDate (DateHelpers)
 
+
+
+#pragma mark Properties
+
+@dynamic Day;
+
+-(NSInteger)Day
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateFormat:@"dd"];
+    
+    NSString *dayOfMonth = [formatter stringFromDate:self];
+    
+    return [[formatter stringFromDate:self] intValue];
+}
+
+#pragma mark methods
+
 -(NSString *)stringByShortDateFormat
 {
     NSDateFormatter *formatter = [self getDateFormatter];
