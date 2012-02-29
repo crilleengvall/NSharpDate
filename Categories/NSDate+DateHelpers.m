@@ -17,7 +17,7 @@
 
 #pragma mark Properties
 
-@dynamic Day, DayOfWeek, DayOfYear;
+@dynamic Day, DayOfWeek, DayOfYear, Hour;
 
 -(NSInteger)Day
 {
@@ -39,9 +39,19 @@
 {
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger dayOfYear = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate: self];
+    NSInteger dayOfYear = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate: self];
     
     return dayOfYear;
+}
+
+-(NSInteger)Hour
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:self];
+    NSInteger hour = [dateComponents hour];
+    
+    return hour;
 }
 
 #pragma mark methods

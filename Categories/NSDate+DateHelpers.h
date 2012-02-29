@@ -12,6 +12,7 @@
 
 @property NSInteger Day;
 @property NSInteger DayOfYear;
+@property NSInteger Hour;
 @property (nonatomic, copy) NSString *DayOfWeek;
 
 -(NSString *)stringByShortDateFormat;

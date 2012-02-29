@@ -21,6 +21,7 @@ int main (int argc, const char * argv[])
         NSLog(@"Day property: %ld", date.Day);
         NSLog(@"DayOfWeek property: %@", date.DayOfWeek);
         NSLog(@"DayOfYear property: %ld", date.DayOfYear);
+        NSLog(@"Hour property: %ld", date.Hour);
     }
     return 0;
 }
