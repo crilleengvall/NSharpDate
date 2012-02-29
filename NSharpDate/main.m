@@ -18,6 +18,7 @@ int main (int argc, const char * argv[])
         NSLog(@"stringByShortDateFormat: %@",[date stringByShortDateFormat]);
         NSLog(@"stringByShortTimeFormat: %@", [date stringByShortTimeFormat]);
         NSLog(@"stringByLongDateFormat: %@", [date stringByLongDateFormat]);
+        NSLog(@"stringByLongTimeFormat: %@", [date stringByLongTimeFormat]);
         NSLog(@"StringByFormat: %@", [date stringByFormat:@"MM"]);
         NSLog(@"Day property: %ld", date.Day);
         NSLog(@"DayOfWeek property: %@", date.DayOfWeek);

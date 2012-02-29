@@ -183,6 +183,15 @@
     return [formatter stringFromDate:self];
 }
 
+-(NSString *)stringByLongTimeFormat
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateStyle:NSDateFormatterNoStyle];
+    [formatter setTimeStyle:NSDateFormatterFullStyle];
+    
+    return [formatter stringFromDate:self];
+}
+
 -(NSLocale *)getCurrentLocale
 {
     NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
