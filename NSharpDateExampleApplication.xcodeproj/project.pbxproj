@@ -16,7 +16,7 @@
 		3D21C5D714FFE2D600256B4F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D21C5D514FFE2D600256B4F /* MainStoryboard_iPhone.storyboard */; };
 		3D21C5DA14FFE2D600256B4F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D21C5D814FFE2D600256B4F /* MainStoryboard_iPad.storyboard */; };
 		3D21C5DD14FFE2D600256B4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5DC14FFE2D600256B4F /* ViewController.m */; };
-		3D21C5E514FFE40100256B4F /* NSDate+DateHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5E414FFE40100256B4F /* NSDate+DateHelpers.m */; };
+		3D21C5E514FFE40100256B4F /* NSDate+NSharpDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		3D21C5D914FFE2D600256B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3D21C5DB14FFE2D600256B4F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3D21C5DC14FFE2D600256B4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3D21C5E314FFE40100256B4F /* NSDate+DateHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateHelpers.h"; sourceTree = "<group>"; };
-		3D21C5E414FFE40100256B4F /* NSDate+DateHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateHelpers.m"; sourceTree = "<group>"; };
+		3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSDate+NSharpDate.h"; sourceTree = "<group>"; };
+		3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSharpDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +55,8 @@
 		3D21C5B414FFE2D300256B4F = {
 			isa = PBXGroup;
 			children = (
-				3D21C5E314FFE40100256B4F /* NSDate+DateHelpers.h */,
-				3D21C5E414FFE40100256B4F /* NSDate+DateHelpers.m */,
+				3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */,
+				3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */,
 				3D21C5C914FFE2D600256B4F /* NSharpDateExampleApplication */,
 				3D21C5C214FFE2D600256B4F /* Frameworks */,
 				3D21C5C014FFE2D600256B4F /* Products */,
@@ -172,7 +172,7 @@
 				3D21C5D014FFE2D600256B4F /* main.m in Sources */,
 				3D21C5D414FFE2D600256B4F /* AppDelegate.m in Sources */,
 				3D21C5DD14FFE2D600256B4F /* ViewController.m in Sources */,
-				3D21C5E514FFE40100256B4F /* NSDate+DateHelpers.m in Sources */,
+				3D21C5E514FFE40100256B4F /* NSDate+NSharpDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +294,7 @@
 				3D21C5E214FFE2D700256B4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

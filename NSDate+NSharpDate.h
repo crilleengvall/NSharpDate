@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (DateHelpers)
+@interface NSDate (NSharpDate)
 
 @property NSInteger Day;
 @property NSInteger DayOfYear;

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Christian Engvall. All rights reserved.
 //
 
-#import "NSDate+DateHelpers.h"
+#import "NSDate+NSharpDate.h"
 
-@implementation NSDate (DateHelpers)
+@implementation NSDate (NSharpDate)
 
 #pragma mark Properties
 
