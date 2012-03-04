@@ -6,8 +6,7 @@ NSdate+NSharpDate.h" to the class where you want to use the category:
 
 #import "NSDate+NSharpDate.h"
 
-Have a look at the example project that is included to see an example of how to use it. The
-methods and properties are called in method createDateList in ViewController.m
+Have a look at the example project that is included to see an example of how to use it. The methods and properties are called in method createDateList in ViewController.m
 
 
 Methods added:
