@@ -1,0 +1,51 @@
+NSharpDate is a category for the NSDate class that adds a few properties and methods. 
+
+Installation:
+Copy the files NSDate+NSharpDate.h and NSDate+NSharpDate.m to your project and import
+NSdate+NSharpDate.h" to the class where you want to use the category:
+
+#import "NSDate+NSharpDate.h"
+
+
+
+Methods added:
+
+stringByShortTimeFormat
+Returns a string looking like : 18:52:41
+
+stringByShortDateFormat
+Returns a string looking like : 04/02/2012
+
+stringByLongDateFormat
+Returns a string looking like: Sunday, 4 March 2012
+
+stringByLongTimeFormat
+Returns a string looking like: 18:52:41 Central European Time
+
+
+Properties added:
+
+DayOfWeek
+Returns a string looking like: Sunday
+
+Day
+Returns day of month as an int
+
+DayOfYear 
+Returns day of year as an int
+
+Hour
+Returns the hour as an int
+
+Milliseconds
+Returns milliseconds as an int
+
+Minute
+Returns minute as an int
+
+Month
+returns month as an int
+
+Second
+Returns second as an int
+
