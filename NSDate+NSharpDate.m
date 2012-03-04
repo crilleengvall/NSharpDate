@@ -1,5 +1,5 @@
 //
-//  NSDate+DateHelpers.m
+//  NSDate+NSharpDate.m
 //  NSharpDate
 //
 //  Created by Christian Engvall on 2012-02-21.
