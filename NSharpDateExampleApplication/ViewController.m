@@ -22,7 +22,7 @@
 {
     NSDate *date = [NSDate date];
     NSArray *methodsResult = [[NSArray alloc] initWithObjects:
-                    
+                    [date stringByFormat:@"yyyy-MM-dd"],
                     [date stringByShortTimeFormat],
                     [date stringByShortDateFormat],
                     [date stringByLongDateFormat],
@@ -48,6 +48,7 @@
 -(void)createMethodAndPropertyDetailList
 {
     NSArray *methodNames = [[NSArray alloc]initWithObjects:
+                            @"stringByFormat:",
                             @"stringByShortTimeFormat",
                             @"stringByShortDateFormat",
                             @"stringByLongDateFormat",
