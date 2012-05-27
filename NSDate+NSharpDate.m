@@ -143,24 +143,6 @@
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
--(NSString *)stringByShortDateFormat
-{
-    NSDateFormatter *formatter = [self getDateFormatter];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterNoStyle];
-    
-    return [formatter stringFromDate:self];
-}
-
--(NSString *)stringByShortTimeFormat
-{
-    NSDateFormatter *formatter = [self getDateFormatter];  
-    [formatter setDateStyle:NSDateFormatterNoStyle];
-    [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
-    
-    return [formatter stringFromDate:self];
-}
-
 -(NSString *)stringByFormat:(NSString *)format
 {
     NSDateFormatter *formatter = [self getDateFormatter];
@@ -183,6 +165,24 @@
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterFullStyle];
+    
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)stringByShortDateFormat
+{
+    NSDateFormatter *formatter = [self getDateFormatter];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)stringByShortTimeFormat
+{
+    NSDateFormatter *formatter = [self getDateFormatter];  
+    [formatter setDateStyle:NSDateFormatterNoStyle];
+    [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
     
     return [formatter stringFromDate:self];
 }

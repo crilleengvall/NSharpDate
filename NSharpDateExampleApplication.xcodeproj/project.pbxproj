@@ -34,7 +34,7 @@
 		3D21C5D914FFE2D600256B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		3D21C5DB14FFE2D600256B4F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3D21C5DC14FFE2D600256B4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSDate+NSharpDate.h"; sourceTree = "<group>"; };
+		3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSharpDate.h"; sourceTree = "<group>"; };
 		3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSharpDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
