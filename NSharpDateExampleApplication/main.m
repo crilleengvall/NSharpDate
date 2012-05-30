@@ -1,13 +1,4 @@
-//
-//  main.m
-//  NSharpDateExampleApplication
-//
-//  Created by Christian Engvall on 2012-03-01.
-//  Copyright (c) 2012 Christian Engvall. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
-
 #import "AppDelegate.h"
 
 int main(int argc, char *argv[])
