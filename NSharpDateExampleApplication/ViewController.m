@@ -6,64 +6,52 @@
 @end
 
 @implementation ViewController
-@synthesize methodsTable = _methodsTable;
-@synthesize dateList = _dateList;
-@synthesize methodAndPropertyList = _methodAndPropertyList;
 
 -(void)createDateList
 {
     NSDate *date = [NSDate date];
     NSDate *dateTwoMonthsAgo = [date newDateByAddingMonths:-2];
     NSDate *dateInThreeMonths = [date newDateByAddingMonths:3];
-    NSArray *methodsResult = [[NSArray alloc] initWithObjects:
-                    [date stringByFormat:@"yyyy-MM-dd"],
+    NSArray *methodsResult = @[[date stringByFormat:@"yyyy-MM-dd"],
                     [date stringByShortTimeFormat],
                     [date stringByShortDateFormat],
                     [date stringByLongDateFormat],
                     [date stringByLongTimeFormat],
                     [NSString stringWithFormat:@"%d", [date monthsSince:dateTwoMonthsAgo]],
-                    [NSString stringWithFormat:@"%d", [date monthsTo:dateInThreeMonths]]
-                     , nil];
+                    [NSString stringWithFormat:@"%d", [date monthsTo:dateInThreeMonths]]];
     
-    NSArray *propertyResult = [[NSArray alloc] initWithObjects:
-                               
-                               date.dayOfWeek, 
+    NSArray *propertyResult = @[date.dayOfWeek, 
                                [NSString stringWithFormat:@"%d", date.day],
                                [NSString stringWithFormat:@"%d", date.dayOfYear],
                                [NSString stringWithFormat:@"%d", date.hour],
                                [NSString stringWithFormat:@"%d", date.milliseconds],
                                [NSString stringWithFormat:@"%d", date.minute],
                                [NSString stringWithFormat:@"%d", date.month],
-                               [NSString stringWithFormat:@"%d", date.second]
-                               ,nil];
+                               [NSString stringWithFormat:@"%d", date.second]];
     
-    self.dateList = [[NSArray alloc] initWithObjects:methodsResult, propertyResult, nil];
+    self.dateList = @[methodsResult, propertyResult];
 }
 
 -(void)createMethodAndPropertyDetailList
 {
-    NSArray *methodNames = [[NSArray alloc]initWithObjects:
-                            @"stringByFormat:yyyy-MM-dd",
+    NSArray *methodNames = @[@"stringByFormat:yyyy-MM-dd",
                             @"stringByShortTimeFormat",
                             @"stringByShortDateFormat",
                             @"stringByLongDateFormat",
                             @"stringByLongTimeFormat",
                             @"monthsSince",
-                            @"monthsTo"
-                            , nil];
+                            @"monthsTo"];
     
-    NSArray *propertyNames = [[NSArray alloc] initWithObjects:
-                              @"DayOfWeek",
+    NSArray *propertyNames = @[@"DayOfWeek",
                               @"Day",
                               @"DayOfYear",
                               @"Hour",
                               @"Milliseconds",
                               @"Minute",
                               @"Month",
-                              @"Second"
-                              , nil];
+                              @"Second"];
     
-    self.methodAndPropertyList = [[NSArray alloc]initWithObjects:methodNames, propertyNames, nil];
+    self.methodAndPropertyList = @[methodNames, propertyNames];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -87,7 +75,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self.dateList objectAtIndex:section] count];
+    return [(self.dateList)[section] count];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
@@ -118,14 +106,9 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"date"];
     }
-   
-    cell.textLabel.text = [[self.dateList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[self.methodAndPropertyList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+       cell.textLabel.text = (self.dateList)[indexPath.section][indexPath.row];
+    cell.detailTextLabel.text = (self.methodAndPropertyList)[indexPath.section][indexPath.row];
     return cell;
 }
-
-
-
-
 
 @end
