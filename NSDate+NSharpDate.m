@@ -8,14 +8,14 @@
 
 -(NSInteger)Day
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"dd"];
     return [[formatter stringFromDate:self] intValue];
 }
 
 -(NSString *)DayOfWeek
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"EEEE"];
     return [formatter stringFromDate:self];
 }
@@ -38,7 +38,7 @@
 
 -(NSInteger)Milliseconds
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"SSS"];
     return [[formatter stringFromDate:self]intValue];
 }
@@ -119,14 +119,14 @@
 
 -(NSString *)stringByFormat:(NSString *)format
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:format];
     return [formatter stringFromDate:self];
 }
 
 -(NSString *)stringByLongDateFormat
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateStyle:NSDateFormatterFullStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
     return [formatter stringFromDate:self];
@@ -134,7 +134,7 @@
 
 -(NSString *)stringByLongTimeFormat
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterFullStyle];
     return [formatter stringFromDate:self];
@@ -142,7 +142,7 @@
 
 -(NSString *)stringByShortDateFormat
 {
-    NSDateFormatter *formatter = [self getDateFormatter];
+    NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
     return [formatter stringFromDate:self];
@@ -150,22 +150,22 @@
 
 -(NSString *)stringByShortTimeFormat
 {
-    NSDateFormatter *formatter = [self getDateFormatter];  
+    NSDateFormatter *formatter = [self dateFormatter];  
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
     return [formatter stringFromDate:self];
 }
 
--(NSLocale *)getCurrentLocale
+-(NSLocale *)currentLocale
 {
     NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:currentLocalIdentifier];
     return locale;
 }
 
--(NSDateFormatter *)getDateFormatter
+-(NSDateFormatter *)dateFormatter
 {
-    NSLocale *locale = [self getCurrentLocale];
+    NSLocale *locale = [self currentLocale];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setLocale:locale];
     return formatter;
