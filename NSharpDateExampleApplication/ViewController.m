@@ -13,13 +13,16 @@
 -(void)createDateList
 {
     NSDate *date = [NSDate date];
+    NSDate *dateTwoMonthsAgo = [date newDateByAddingMonths:-2];
+    NSDate *dateInThreeMonths = [date newDateByAddingMonths:3];
     NSArray *methodsResult = [[NSArray alloc] initWithObjects:
                     [date stringByFormat:@"yyyy-MM-dd"],
                     [date stringByShortTimeFormat],
                     [date stringByShortDateFormat],
                     [date stringByLongDateFormat],
-                    [date stringByLongTimeFormat]
-                     
+                    [date stringByLongTimeFormat],
+                    [NSString stringWithFormat:@"%d", [date monthsSince:dateTwoMonthsAgo]],
+                    [NSString stringWithFormat:@"%d", [date monthsTo:dateInThreeMonths]]
                      , nil];
     
     NSArray *propertyResult = [[NSArray alloc] initWithObjects:
@@ -40,11 +43,13 @@
 -(void)createMethodAndPropertyDetailList
 {
     NSArray *methodNames = [[NSArray alloc]initWithObjects:
-                            @"stringByFormat:",
+                            @"stringByFormat:yyyy-MM-dd",
                             @"stringByShortTimeFormat",
                             @"stringByShortDateFormat",
                             @"stringByLongDateFormat",
-                            @"stringByLongTimeFormat"
+                            @"stringByLongTimeFormat",
+                            @"monthsSince",
+                            @"monthsTo"
                             , nil];
     
     NSArray *propertyNames = [[NSArray alloc] initWithObjects:

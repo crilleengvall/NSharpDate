@@ -17,6 +17,8 @@
 -(NSDate *)newDateByAddingMonths:(NSInteger)months;
 -(NSDate *)newDateByAddingSeconds:(NSInteger)seconds;
 -(NSDate *)newDateByAddingYears:(NSInteger)years;
+-(NSInteger)monthsSince:(NSDate *)aDate;
+-(NSInteger)monthsTo:(NSDate *)aDate;
 -(NSString *)stringByFormat:(NSString *)format;
 -(NSString *)stringByLongDateFormat;
 -(NSString *)stringByLongTimeFormat;

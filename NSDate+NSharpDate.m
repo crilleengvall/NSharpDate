@@ -155,6 +155,22 @@
     return [formatter stringFromDate:self];
 }
 
+-(NSInteger)monthsSince:(NSDate *)aDate
+{
+    NSUInteger flags = NSMonthCalendarUnit;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:flags fromDate:aDate toDate:self options:0];
+    return [components month];
+}
+
+-(NSInteger)monthsTo:(NSDate *)aDate
+{
+    NSUInteger flags = NSMonthCalendarUnit;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:flags fromDate:self toDate:aDate options:0];
+    return [components month];
+}
+
 -(NSLocale *)currentLocale
 {
     NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
