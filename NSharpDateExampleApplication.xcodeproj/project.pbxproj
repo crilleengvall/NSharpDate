@@ -17,7 +17,7 @@
 		3D21C5DA14FFE2D600256B4F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D21C5D814FFE2D600256B4F /* MainStoryboard_iPad.storyboard */; };
 		3D21C5DD14FFE2D600256B4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5DC14FFE2D600256B4F /* ViewController.m */; };
 		3D21C5E514FFE40100256B4F /* NSDate+NSharpDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */; };
-		D68F74A416CE74340019096F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F74A316CE74340019096F /* Default-568h@2x.png */; };
+		D68F74A616CE797B0019096F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F74A516CE797B0019096F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		3D21C5DC14FFE2D600256B4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSharpDate.h"; sourceTree = "<group>"; };
 		3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSharpDate.m"; sourceTree = "<group>"; };
-		D68F74A316CE74340019096F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D68F74A516CE797B0019096F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,6 @@
 		3D21C5B414FFE2D300256B4F = {
 			isa = PBXGroup;
 			children = (
-				D68F74A316CE74340019096F /* Default-568h@2x.png */,
 				3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */,
 				3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */,
 				3D21C5C914FFE2D600256B4F /* NSharpDateExampleApplication */,
@@ -101,6 +100,7 @@
 		3D21C5CA14FFE2D600256B4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D68F74A516CE797B0019096F /* Default-568h@2x.png */,
 				3D21C5CB14FFE2D600256B4F /* NSharpDateExampleApplication-Info.plist */,
 				3D21C5CC14FFE2D600256B4F /* InfoPlist.strings */,
 				3D21C5CF14FFE2D600256B4F /* main.m */,
@@ -162,7 +162,7 @@
 				3D21C5CE14FFE2D600256B4F /* InfoPlist.strings in Resources */,
 				3D21C5D714FFE2D600256B4F /* MainStoryboard_iPhone.storyboard in Resources */,
 				3D21C5DA14FFE2D600256B4F /* MainStoryboard_iPad.storyboard in Resources */,
-				D68F74A416CE74340019096F /* Default-568h@2x.png in Resources */,
+				D68F74A616CE797B0019096F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
