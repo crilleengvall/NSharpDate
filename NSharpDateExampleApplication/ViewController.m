@@ -24,14 +24,14 @@
     
     NSArray *propertyResult = [[NSArray alloc] initWithObjects:
                                
-                               date.DayOfWeek, 
-                               [NSString stringWithFormat:@"%d", date.Day],
-                               [NSString stringWithFormat:@"%d", date.DayOfYear],
-                               [NSString stringWithFormat:@"%d", date.Hour],
-                               [NSString stringWithFormat:@"%d", date.Milliseconds],
-                               [NSString stringWithFormat:@"%d", date.Minute],
-                               [NSString stringWithFormat:@"%d", date.Month],
-                               [NSString stringWithFormat:@"%d", date.Second]
+                               date.dayOfWeek, 
+                               [NSString stringWithFormat:@"%d", date.day],
+                               [NSString stringWithFormat:@"%d", date.dayOfYear],
+                               [NSString stringWithFormat:@"%d", date.hour],
+                               [NSString stringWithFormat:@"%d", date.milliseconds],
+                               [NSString stringWithFormat:@"%d", date.minute],
+                               [NSString stringWithFormat:@"%d", date.month],
+                               [NSString stringWithFormat:@"%d", date.second]
                                ,nil];
     
     self.dateList = [[NSArray alloc] initWithObjects:methodsResult, propertyResult, nil];

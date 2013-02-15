@@ -4,31 +4,30 @@
 
 #pragma mark Properties
 
-@dynamic Day, DayOfWeek, DayOfYear, Hour, Milliseconds, Minute, Month, Second;
+@dynamic day, dayOfWeek, dayOfYear, hour, milliseconds, minute, month, second;
 
--(NSInteger)Day
+-(NSInteger)day
 {
     NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"dd"];
     return [[formatter stringFromDate:self] intValue];
 }
 
--(NSString *)DayOfWeek
+-(NSString *)dayOfWeek
 {
     NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"EEEE"];
     return [formatter stringFromDate:self];
 }
 
--(NSInteger)DayOfYear
+-(NSInteger)dayOfYear
 {
-    
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger dayOfYear = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate: self];
     return dayOfYear;
 }
 
--(NSInteger)Hour
+-(NSInteger)hour
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [calendar components:NSHourCalendarUnit fromDate:self];
@@ -36,14 +35,14 @@
     return hour;
 }
 
--(NSInteger)Milliseconds
+-(NSInteger)milliseconds
 {
     NSDateFormatter *formatter = [self dateFormatter];
     [formatter setDateFormat:@"SSS"];
     return [[formatter stringFromDate:self]intValue];
 }
 
--(NSInteger)Minute
+-(NSInteger)minute
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [calendar components:NSMinuteCalendarUnit fromDate:self];
@@ -51,7 +50,7 @@
     return minute;
 }
 
--(NSInteger)Month
+-(NSInteger)month
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponets = [calendar components:NSMonthCalendarUnit fromDate:self];
@@ -59,7 +58,7 @@
     return month;
 }
 
--(NSInteger)Second
+-(NSInteger)second
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [calendar components:NSSecondCalendarUnit fromDate:self];

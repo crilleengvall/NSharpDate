@@ -2,14 +2,14 @@
 
 @interface NSDate (NSharpDate)
 
-@property (nonatomic, copy) NSString *DayOfWeek;
-@property NSInteger Day;
-@property NSInteger DayOfYear;
-@property NSInteger Hour;
-@property NSInteger Milliseconds;
-@property NSInteger Minute;
-@property NSInteger Month;
-@property NSInteger Second;
+@property (nonatomic, copy) NSString *dayOfWeek;
+@property NSInteger day;
+@property NSInteger dayOfYear;
+@property NSInteger hour;
+@property NSInteger milliseconds;
+@property NSInteger minute;
+@property NSInteger month;
+@property NSInteger second;
 
 -(NSDate *)newDateByAddingDays:(NSInteger) days;
 -(NSDate *)newDateByAddingHours:(NSInteger) hours;

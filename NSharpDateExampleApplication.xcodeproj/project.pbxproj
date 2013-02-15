@@ -17,6 +17,7 @@
 		3D21C5DA14FFE2D600256B4F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D21C5D814FFE2D600256B4F /* MainStoryboard_iPad.storyboard */; };
 		3D21C5DD14FFE2D600256B4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5DC14FFE2D600256B4F /* ViewController.m */; };
 		3D21C5E514FFE40100256B4F /* NSDate+NSharpDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */; };
+		D68F74A416CE74340019096F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D68F74A316CE74340019096F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3D21C5DC14FFE2D600256B4F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSharpDate.h"; sourceTree = "<group>"; };
 		3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSharpDate.m"; sourceTree = "<group>"; };
+		D68F74A316CE74340019096F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		3D21C5B414FFE2D300256B4F = {
 			isa = PBXGroup;
 			children = (
+				D68F74A316CE74340019096F /* Default-568h@2x.png */,
 				3D21C5E314FFE40100256B4F /* NSDate+NSharpDate.h */,
 				3D21C5E414FFE40100256B4F /* NSDate+NSharpDate.m */,
 				3D21C5C914FFE2D600256B4F /* NSharpDateExampleApplication */,
@@ -132,7 +135,7 @@
 		3D21C5B614FFE2D300256B4F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 3D21C5B914FFE2D300256B4F /* Build configuration list for PBXProject "NSharpDateExampleApplication" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -159,6 +162,7 @@
 				3D21C5CE14FFE2D600256B4F /* InfoPlist.strings in Resources */,
 				3D21C5D714FFE2D600256B4F /* MainStoryboard_iPhone.storyboard in Resources */,
 				3D21C5DA14FFE2D600256B4F /* MainStoryboard_iPad.storyboard in Resources */,
+				D68F74A416CE74340019096F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +216,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -238,6 +246,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
