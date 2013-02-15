@@ -10,7 +10,6 @@
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:@"dd"];
-
     return [[formatter stringFromDate:self] intValue];
 }
 
@@ -18,7 +17,6 @@
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:@"EEEE"];
-    
     return [formatter stringFromDate:self];
 }
 
@@ -27,17 +25,14 @@
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger dayOfYear = [calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate: self];
-    
     return dayOfYear;
 }
 
 -(NSInteger)Hour
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    
     NSDateComponents *dateComponents = [calendar components:NSHourCalendarUnit fromDate:self];
     NSInteger hour = [dateComponents hour];
-    
     return hour;
 }
 
@@ -45,17 +40,14 @@
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:@"SSS"];
-    
     return [[formatter stringFromDate:self]intValue];
 }
 
 -(NSInteger)Minute
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    
     NSDateComponents *dateComponents = [calendar components:NSMinuteCalendarUnit fromDate:self];
     NSInteger minute = [dateComponents minute];
-    
     return minute;
 }
 
@@ -63,9 +55,7 @@
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponets = [calendar components:NSMonthCalendarUnit fromDate:self];
-    
     NSInteger month = [dateComponets month];
-    
     return month;
 }
 
@@ -73,9 +63,7 @@
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [calendar components:NSSecondCalendarUnit fromDate:self];
-    
     NSInteger second = [dateComponents second];
-    
     return second;
 }
 
@@ -86,7 +74,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     [dateComponents setDay:days];
-    
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
@@ -95,7 +82,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     [dateComponents setHour:hours];
-    
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
@@ -104,7 +90,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponets = [[NSDateComponents alloc]init];
     [dateComponets setMinute:minutes];
-    
     return [calendar dateByAddingComponents:dateComponets toDate:self options:0];
 }
 
@@ -113,7 +98,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     [dateComponents setMonth:months];
-    
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
@@ -122,7 +106,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
     [dateComponents setSecond:seconds];
-    
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
@@ -131,7 +114,6 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     [dateComponents setYear:years];
-    
     return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
 }
 
@@ -139,7 +121,6 @@
 {
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateFormat:format];
-    
     return [formatter stringFromDate:self];
 }
 
@@ -148,7 +129,6 @@
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateStyle:NSDateFormatterFullStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
-    
     return [formatter stringFromDate:self];
 }
 
@@ -157,7 +137,6 @@
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterFullStyle];
-    
     return [formatter stringFromDate:self];
 }
 
@@ -166,7 +145,6 @@
     NSDateFormatter *formatter = [self getDateFormatter];
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
-    
     return [formatter stringFromDate:self];
 }
 
@@ -175,7 +153,6 @@
     NSDateFormatter *formatter = [self getDateFormatter];  
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
-    
     return [formatter stringFromDate:self];
 }
 
@@ -183,7 +160,6 @@
 {
     NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
     NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:currentLocalIdentifier];
-    
     return locale;
 }
 
@@ -192,7 +168,6 @@
     NSLocale *locale = [self getCurrentLocale];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setLocale:locale];
-    
     return formatter;
 }
 
