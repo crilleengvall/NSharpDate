@@ -11,13 +11,13 @@
 @property NSInteger month;
 @property NSInteger second;
 
--(NSDate *)newDateByAddingDays:(NSInteger) days;
--(NSDate *)newDateByAddingHours:(NSInteger) hours;
--(NSDate *)newDateByAddingMinutes:(NSInteger) minutes;
--(NSDate *)newDateByAddingMonths:(NSInteger) months;
--(NSDate *)newDateByAddingSeconds:(NSInteger) seconds;
--(NSDate *)newDateByAddingYears:(NSInteger) years;
--(NSString *)stringByFormat:(NSString *) format;
+-(NSDate *)newDateByAddingDays:(NSInteger)days;
+-(NSDate *)newDateByAddingHours:(NSInteger)hours;
+-(NSDate *)newDateByAddingMinutes:(NSInteger)minutes;
+-(NSDate *)newDateByAddingMonths:(NSInteger)months;
+-(NSDate *)newDateByAddingSeconds:(NSInteger)seconds;
+-(NSDate *)newDateByAddingYears:(NSInteger)years;
+-(NSString *)stringByFormat:(NSString *)format;
 -(NSString *)stringByLongDateFormat;
 -(NSString *)stringByLongTimeFormat;
 -(NSString *)stringByShortDateFormat;
