@@ -180,9 +180,7 @@
 
 -(NSDateFormatter *)dateFormatter
 {
-    NSLocale *locale = [self currentLocale];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setLocale:locale];
     return formatter;
 }
 
