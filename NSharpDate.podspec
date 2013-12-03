@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'NSharpDate'
-  s.version      = '1.0'
+  s.version      = '1.0.0'
   s.summary      = 'a NSDate Category that adds convenient methods and properties for converting to NSString for IOS and OSX'
   s.description  = <<-DESC
   
