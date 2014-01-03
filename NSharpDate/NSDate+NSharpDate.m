@@ -185,13 +185,6 @@
     return isToday;
 }
 
--(NSLocale *)currentLocale
-{
-    NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:currentLocalIdentifier];
-    return locale;
-}
-
 -(NSDateFormatter *)dateFormatter
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
