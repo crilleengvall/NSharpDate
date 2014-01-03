@@ -18,7 +18,10 @@
                     [date stringByLongDateFormat],
                     [date stringByLongTimeFormat],
                     [NSString stringWithFormat:@"%d", [date monthsSince:dateTwoMonthsAgo]],
-                    [NSString stringWithFormat:@"%d", [date monthsTo:dateInThreeMonths]]];
+                    [NSString stringWithFormat:@"%d", [date monthsTo:dateInThreeMonths]],
+                    [NSString stringWithFormat:@"%s", [date isToday] ? "YES" : "NO"]
+                    ];
+    
     
     NSArray *propertyResult = @[date.dayOfWeek, 
                                [NSString stringWithFormat:@"%d", date.day],
@@ -40,7 +43,8 @@
                             @"stringByLongDateFormat",
                             @"stringByLongTimeFormat",
                             @"monthsSince",
-                            @"monthsTo"];
+                            @"monthsTo",
+                            @"isToday"];
     
     NSArray *propertyNames = @[@"DayOfWeek",
                               @"Day",

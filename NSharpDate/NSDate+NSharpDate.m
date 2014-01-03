@@ -171,6 +171,20 @@
     return [components month];
 }
 
+-(BOOL)isToday
+{
+    BOOL isToday = NO;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [calendar dateFromComponents:components];
+    components = [calendar components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:self];
+    NSDate *aDate = [calendar dateFromComponents:components];
+    if([today isEqualToDate:aDate]) {
+        isToday = YES;
+    }
+    return isToday;
+}
+
 -(NSLocale *)currentLocale
 {
     NSString *currentLocalIdentifier = [[NSLocale currentLocale] localeIdentifier];

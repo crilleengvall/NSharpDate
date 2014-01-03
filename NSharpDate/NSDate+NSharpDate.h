@@ -24,5 +24,6 @@
 -(NSString *)stringByLongTimeFormat;
 -(NSString *)stringByShortDateFormat;
 -(NSString *)stringByShortTimeFormat;
+-(BOOL)isToday;
 
 @end
