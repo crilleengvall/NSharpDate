@@ -185,6 +185,22 @@
     return isToday;
 }
 
+-(BOOL)isTomorrow
+{
+    BOOL isTomorrow = NO;
+    NSDate *todaysDate = [NSDate date];
+    NSDate *tomorrowsDate = [todaysDate newDateByAddingDays:1];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:tomorrowsDate];
+    NSDate *tomorrow = [calendar dateFromComponents:components];
+    components = [calendar components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:self];
+    NSDate *aDate = [calendar dateFromComponents:components];
+    if([tomorrow isEqual:aDate]) {
+        isTomorrow = YES;
+    }
+    return isTomorrow;
+}
+
 -(NSDateFormatter *)dateFormatter
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

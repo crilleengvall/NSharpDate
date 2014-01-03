@@ -11,6 +11,8 @@
 @property NSInteger month;
 @property NSInteger second;
 
+-(BOOL)isToday;
+-(BOOL)isTomorrow;
 -(NSDate *)newDateByAddingDays:(NSInteger)days;
 -(NSDate *)newDateByAddingHours:(NSInteger)hours;
 -(NSDate *)newDateByAddingMinutes:(NSInteger)minutes;
@@ -24,6 +26,5 @@
 -(NSString *)stringByLongTimeFormat;
 -(NSString *)stringByShortDateFormat;
 -(NSString *)stringByShortTimeFormat;
--(BOOL)isToday;
 
 @end
