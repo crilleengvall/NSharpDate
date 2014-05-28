@@ -3,6 +3,7 @@
 @interface NSDate (NSharpDate)
 
 @property (nonatomic, copy) NSString *dayOfWeek;
+@property (nonatomic, copy)NSDateFormatter *dateFormatter;
 @property NSInteger day;
 @property NSInteger dayOfYear;
 @property NSInteger hour;

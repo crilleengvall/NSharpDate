@@ -1,4 +1,7 @@
 #import "NSDate+NSharpDate.h"
+#import <objc/runtime.h>
+
+NSString * const dateFormatterKey = @"NSharpDateFormatter";
 
 @implementation NSDate (NSharpDate)
 
@@ -6,16 +9,31 @@
 
 @dynamic day, dayOfWeek, dayOfYear, hour, milliseconds, minute, month, second;
 
+- (NSDateFormatter *)dateFormatter
+{
+    NSDateFormatter *nsharpDateFormatter = objc_getAssociatedObject(self, CFBridgingRetain(dateFormatterKey));
+    if(nsharpDateFormatter == nil) {
+        nsharpDateFormatter = [[NSDateFormatter alloc] init];
+        self.dateFormatter = nsharpDateFormatter;
+    }
+    return nsharpDateFormatter;
+}
+
+- (void)setDateFormatter:(NSDateFormatter *)dateFormatter
+{
+    objc_setAssociatedObject(self, CFBridgingRetain(dateFormatterKey), dateFormatter, OBJC_ASSOCIATION_ASSIGN);
+}
+
 -(NSInteger)day
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateFormat:@"dd"];
     return [[formatter stringFromDate:self] intValue];
 }
 
 -(NSString *)dayOfWeek
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateFormat:@"EEEE"];
     return [formatter stringFromDate:self];
 }
@@ -37,7 +55,7 @@
 
 -(NSInteger)milliseconds
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateFormat:@"SSS"];
     return [[formatter stringFromDate:self]intValue];
 }
@@ -118,14 +136,14 @@
 
 -(NSString *)stringByFormat:(NSString *)format
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateFormat:format];
     return [formatter stringFromDate:self];
 }
 
 -(NSString *)stringByLongDateFormat
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateStyle:NSDateFormatterFullStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
     return [formatter stringFromDate:self];
@@ -133,7 +151,7 @@
 
 -(NSString *)stringByLongTimeFormat
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterFullStyle];
     return [formatter stringFromDate:self];
@@ -141,7 +159,7 @@
 
 -(NSString *)stringByShortDateFormat
 {
-    NSDateFormatter *formatter = [self dateFormatter];
+    NSDateFormatter *formatter = self.dateFormatter;
     [formatter setDateStyle:NSDateFormatterShortStyle];
     [formatter setTimeStyle:NSDateFormatterNoStyle];
     return [formatter stringFromDate:self];
@@ -149,7 +167,7 @@
 
 -(NSString *)stringByShortTimeFormat
 {
-    NSDateFormatter *formatter = [self dateFormatter];  
+    NSDateFormatter *formatter = self.dateFormatter;  
     [formatter setDateStyle:NSDateFormatterNoStyle];
     [formatter setTimeStyle:NSDateFormatterMediumStyle]; 
     return [formatter stringFromDate:self];
@@ -199,12 +217,6 @@
         isTomorrow = YES;
     }
     return isTomorrow;
-}
-
--(NSDateFormatter *)dateFormatter
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    return formatter;
 }
 
 @end
