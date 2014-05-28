@@ -24,5 +24,5 @@ for more information and setup instructions go to <a href="http://www.nsdatetost
 #### Podfile
 
 ```ruby
-pod 'NSharpDate', '1.0.1'
+pod 'NSharpDate', '1.1'
 ```
