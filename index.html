@@ -58,8 +58,8 @@ Add this line to the top of the class where you want to use NSharpDate:<code>#im
 <h3>
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
 
-<p>NSDate *date = [NSDate date];
-NSString *dateString = [date stringByFormat:@"yyyy-MM-dd"];</p>
+<p><code>NSDate *date = [NSDate date];</code>
+<code>NSString *dateString = [date stringByFormat:@"yyyy-MM-dd"];</code></p>
 
 <h3>
 <a id="returns" class="anchor" href="#returns" aria-hidden="true"><span class="octicon octicon-link"></span></a>returns:</h3>
@@ -72,14 +72,29 @@ NSString *dateString = [date stringByFormat:@"yyyy-MM-dd"];</p>
 <h3>
 <a id="example-1" class="anchor" href="#example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
 
-<p>NSDate *date = [NSDate date];
-NSString *dateString = [date stringByLongDateFormat];</p>
+<p><code>NSDate *date = [NSDate date];</code>
+<code>NSString *dateString = [date stringByLongDateFormat];</code></p>
 
 <h3>
 <a id="returns-1" class="anchor" href="#returns-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>returns:</h3>
 
 <p>IOS Device set to English locale: Sunday, May 27, 2012
 IOS Device set to Swedish locale: söndag 27 maj 2012</p>
+
+<h2>
+<a id="stringbylongtimeformat" class="anchor" href="#stringbylongtimeformat" aria-hidden="true"><span class="octicon octicon-link"></span></a>stringByLongTimeFormat</h2>
+
+<h3>
+<a id="example-2" class="anchor" href="#example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><code>NSDate *date = [NSDate date];</code>
+<code>NSString *dateString = [date stringByLongTimeFormat];</code></p>
+
+<h3>
+<a id="returns-2" class="anchor" href="#returns-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>returns:</h3>
+
+<p>IOS Device set to English locale: 6:22:09 PM Central European Summer time
+IOS Device set to Swedish locale: kl 18:22:09 Centraleuropa, sommartid</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/crilleengvall/NSharpDate">Nsharpdate</a> is maintained by <a href="https://github.com/crilleengvall">crilleengvall</a>.</span>
