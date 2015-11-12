@@ -3,13 +3,13 @@ NSharpDate
 
 NSharpDate is a category for the NSDate class that adds a few properties and methods. 
 
-for more information and setup instructions go to <a href="http://www.nsdatetostring.com">www.nsdatetostring.com</a>
+for more information and setup instructions go to <a href="http://crilleengvall.github.io/NSharpDate/">http://crilleengvall.github.io/NSharpDate/</a>
 
 
 ## How To Get Started
 
 - [Download NSharpDate](https://github.com/crilleengvall/NSharpDate/zipball/master) and try out the example app
-- Check out the [documentation](http://www.nsdatetostring.com/how-to-use/)
+- Check out the [documentation](http://crilleengvall.github.io/NSharpDate/)
 
 
 ### Installation without CocoaPods
