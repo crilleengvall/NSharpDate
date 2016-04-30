@@ -3,6 +3,9 @@ NSharpDate
 
 NSharpDate is a category for the NSDate class that adds a few properties and methods. 
 
+Support this open source repo by using 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ChristianEngvall&url=https://github.com/crilleengvall/NSharpDate&title=NsharpDate&language=&tags=github&category=software)       
+
 for more information and setup instructions go to <a href="http://crilleengvall.github.io/NSharpDate/">http://crilleengvall.github.io/NSharpDate/</a>
 
 
